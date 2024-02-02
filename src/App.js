@@ -17,11 +17,11 @@ function App() {
     <Route path="/" element={<Home/>}/>
     <Route path="/registration" element={<Registration/>}/>
     <Route path="/login" element={<Login/>}/>
-    <Route path="/dashboard" element={<AdminDashboard/>}/>
+    {/* <Route path="/dashboard" element={<AdminDashboard/>}/>
     <Route path="/vendors" element = {<Vendors/>}/>
     <Route path="/users" element = {<Users/>}/>
     <Route path="/categories" element = {<Categories/>}/>
-    <Route path="/products" element={<Products/>}/>
+    <Route path="/products" element={<Products/>}/> */}
     </Routes>
     </BrowserRouter>
   </div>;

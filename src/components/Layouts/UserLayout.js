@@ -40,14 +40,44 @@ function UserLayout() {
                 })
         }
         fetchData()
-    }, [])
+    }, [currentPage])
 
-    let nameList = <li></li>
-    let emailList = <li></li>
-    let statusList = <li></li>
-    
     return (
-        <div>UserLayout</div>
+        <div className='dashboard-layout'>
+        <div className='vendor-layout'>
+          <div className="list-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.map((data, index) => (
+                  <tr key={index} className={data.status ? 'active' : 'inactive'}>
+                    <td>{data.first_name ? data.first_name : 'N/A'}</td>
+                    <td>{data.email ? data.email : 'N/A'}</td>
+                    <td>{data.status}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <div className="pagination">
+              <button onClick={prevPage} disabled={currentPage === 0}>
+                Previous
+              </button>
+              <button
+                onClick={nextPage}
+                disabled={currentPage * 10 + data.length >= response.recordsFiltered}
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     )
 }
 

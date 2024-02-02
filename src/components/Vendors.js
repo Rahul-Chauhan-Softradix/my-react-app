@@ -1,10 +1,10 @@
-import {React} from 'react'
+import { React } from 'react'
 import Sidebar from './Common/Sidebar'
 import Header from './Common/Header'
 import VendorLayouts from './Layouts/VendorLayouts'
 
 
- function Vendors() {
+function Vendors() {
   return (
     <>
       <div className='main-layout'>
@@ -12,7 +12,7 @@ import VendorLayouts from './Layouts/VendorLayouts'
         <div className='right-section'>
           <Header></Header>
           <div className='body-content'>
-    <VendorLayouts ></VendorLayouts>
+            <VendorLayouts ></VendorLayouts>
           </div>
         </div>
       </div>

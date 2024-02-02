@@ -40,22 +40,6 @@ function VendorLayouts() {
     fetchData()
   }, [currentPage])
 
-  let nameList = <li></li>
-  let emailList = <li></li>
-  let status = <li></li>
-
-  if (data && data.length > 0) {
-    nameList = data.map((ele) => {
-      <li>{ele.first_name ? ele.first_name : 'N/A'}</li>
-    })
-
-    emailList = data.map((ele) => {
-      <li>{ele.email ? ele.email : 'N/A'}</li>
-    })
-    status = data.map((ele) => {
-      <li>{ele.status ? ele.status : 'N/A'}</li>
-    })
-  }
 
   return (
     <div className='dashboard-layout'>
