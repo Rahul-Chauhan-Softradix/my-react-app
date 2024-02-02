@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 function Login() {
-  const navigate = useNavigate()
+  const navigate = useNavigate() 
   const initialValues = {
     email: "",
     password: ""
